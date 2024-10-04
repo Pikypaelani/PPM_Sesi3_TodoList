@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, StyleSheet } from 'react-native';
 
 const TodoList = () => {
-  const [title, setTitle] = useState(""); // Menyimpan input pengguna untuk menambah atau mengedit
+  const [title, setTitle] = useState(""); 
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -10,10 +10,10 @@ const TodoList = () => {
       completed: false,
     },
   ]);
-  const [isEditing, setIsEditing] = useState(false); // Untuk mengetahui apakah dalam mode edit
-  const [editingId, setEditingId] = useState(null); // Menyimpan ID todo yang sedang diedit
+  const [isEditing, setIsEditing] = useState(false); 
+  const [editingId, setEditingId] = useState(null); 
 
-  // Fungsi untuk menambah todo baru atau menyimpan perubahan edit
+  // Fungsi untuk menambah todo atau menyimpan perubahan edit
   const handleAddOrEditTodo = () => {
     if (!title) {
       Alert.alert('Error', 'Masukkan tugas yang ingin ditambahkan atau diedit');
